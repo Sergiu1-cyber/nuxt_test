@@ -4,6 +4,7 @@
     <div>
       <h1>{{product.id}}</h1>
       <h1>{{product.title}}</h1>
+      <img src="product.image" alt="img">
     </div>
   </div>
 </template>
