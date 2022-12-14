@@ -1,18 +1,30 @@
 <template>
-  <div 
-    class="flex flex-col bg-emerald-200 absolute w-1/4 h-screen p-2" 
-    :class="{hidden: saidbarState}">
+  <div
+    class="flex flex-col bg-emerald-200 absolute w-1/4 h-screen p-2"
+    :class="{ hidden: saidbarState }">
     <div>
       <button @click="Hide">close</button>
     </div>
-    <div class="flex flex-col">
-      <NuxtLink to="/" @click="Hide">Home</NuxtLink>
-      <NuxtLink to="/about" @click="Hide">About</NuxtLink>
-      <NuxtLink to="/products" @click="Hide">Products</NuxtLink>
+    <div v-for="link in links" class="flex flex-col">
+      <NuxtLink :to="link.to" @click="Hide">{{ link.title }}</NuxtLink>
     </div>
   </div>
 </template>
 
 <script setup>
-  const {saidbarState, Hide} = useHiddeSaidbar()
+const { saidbarState, Hide } = useHiddeSaidbar();
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      links: [
+        { to: '/', title: 'Home' },
+        { to: '/about', title: 'About' },
+        { to: '/products', title: 'Products' },
+      ],
+    };
+  },
+};
 </script>
