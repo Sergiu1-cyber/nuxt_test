@@ -2,12 +2,12 @@
   <AppHeader />
   <div 
     class="h-screen"
-    @click="saidbarState = true">
+    @click="Hide">
       <slot />
   </div>
 </template>
 
 <script setup>
-  const saidbarState = useHiddeSaidbar()
+  const {Hide} = useHiddeSaidbar()
 </script>
 

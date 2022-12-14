@@ -1,3 +1,13 @@
 export const useHiddeSaidbar = () => {
-  return useState('hidden', () => true);
+  const saidbarState = useState('hidden', () => true)
+
+  const Hide = () => {
+    saidbarState.value = true
+  }
+
+  const Show = () => {
+    saidbarState.value = false
+  }
+
+  return {saidbarState, Hide, Show}
 }
