@@ -3,3 +3,9 @@
     <h1 class="text-red-500">Home Page</h1>
   </div>
 </template>
+
+<script>
+export default {
+  name: "Home",
+}
+</script>
