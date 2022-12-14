@@ -7,6 +7,11 @@
 </template>
 
 <script setup>
-
   const {counter, increment} = useTest()
+</script>
+
+<script>
+export default {
+  name: 'About',
+}
 </script>
