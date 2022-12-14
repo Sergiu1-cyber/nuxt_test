@@ -1,0 +1,11 @@
+export const useTest = () => {
+
+  const counter = useState('counter', () => 0)
+  
+  const increment = () => {
+    counter.value ++
+  }
+
+  return {counter, increment}
+
+}
